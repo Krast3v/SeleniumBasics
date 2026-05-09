@@ -21,6 +21,7 @@ public class GooglePage
 
     public string GetTitle()
     {
+        wait.Until(d => d.Title.Length > 0);
         return driver.Title;
     }
 

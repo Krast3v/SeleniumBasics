@@ -10,7 +10,7 @@ public class SearchTests
     private IWebDriver driver;
     private GooglePage googlePage;
 
-    [SetUp]
+    [OneTimeSetUp]
     public void Setup()
     {
         driver = new ChromeDriver();
@@ -44,7 +44,7 @@ public class SearchTests
     }
 
 
-    [TearDown]
+    [OneTimeTearDown]
     public void TearDown()
     {
         driver.Quit();
