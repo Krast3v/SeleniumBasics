@@ -36,6 +36,6 @@ public class GooglePage
         js.ExecuteScript("arguments[0].value='" + query + "';", searchBox);
         searchBox.Submit();
 
-        wait.Until(d => d.Title.Contains(query.Split(' ')[0]));
+        wait.Until(d => !d.Title.Equals("Google") && d.Title.Length > 0);
     }
 }
